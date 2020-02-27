@@ -6,9 +6,9 @@
 
 ### Run
 * `npm run watch` to watch files for changes
-* `npm run serve` to start server
 * `npm run local-cms` to start local netlify cms proxy server
+* `npm run serve` to start server
 
 ### View
-* Go to admin by visiting url provided by serve command
-* go to final page output by going to /page.html
+* Netlify cms admin: http://localhost:5000
+* Final page outputhttp://localhost:5000/page.html
