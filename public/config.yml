@@ -1,0 +1,45 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: assets/uploads
+public_folder: uploads
+collections:
+  - name: pages
+    name_singular: page
+    label: Pages
+    label_singular: Page
+    preview_path: "{{slug}}"
+    folder: content/pages
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Subtitle
+        name: subtitle
+        widget: string
+      - label: Layout
+        name: layout
+        widget: select
+        default: sidebar-left
+        options:
+          - Right Sidebar
+          - Left Sidebar
+          - One Column
+      - label: Hero Size
+        name: heroSize
+        widget: select
+        default: medium
+        options:
+          - Large
+          - Medium
+          - Small
+      - label: Content
+        name: body
+        widget: markdown
+      - label: Side Bar Content (if sidebar layout)
+        name: sidebar
+        widget: markdown
+local_backend: true
